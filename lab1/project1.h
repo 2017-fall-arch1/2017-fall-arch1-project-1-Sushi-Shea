@@ -3,9 +3,9 @@
 #define llist_included
 
 
-/*Definition of a linked list node */
+/*Definition of a tree node */
 typedef struct LLNode_s {
-  struct LLNode_s *left, right;
+  struct LLNode_s *left, *right;
   char *str;
 } LLNode;
 
