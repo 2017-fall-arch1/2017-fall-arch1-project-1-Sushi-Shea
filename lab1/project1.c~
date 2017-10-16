@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include "project1.h"
+#include <assert.h>
+#include <stdlib.h>
+
+int llDoCheck = 1;
+
+#define doCheck(_lp) (llDoCheck && llCheck(_lp))
+
+/* Create tree*/
+LTree *llAlloc(){
+  LTree lp->root = 0;

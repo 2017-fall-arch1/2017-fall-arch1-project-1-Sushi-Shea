@@ -1,0 +1,38 @@
+
+#include <stdio.h>
+#ifndef llist_included
+#define llist_included
+
+
+/*Definition of a tree node */
+typedef struct LLNode_s {
+  struct LLNode_s *left, *right;
+  char *str;
+} LLNode;
+
+/*Structure for a list */
+typedef struct {
+  LLNode *root;
+} LTree;
+
+extern llDoCheck;
+
+/* create a new list */
+LTree *llAlloc();
+
+/*Free memory space for a list*/
+void llFree(LTree *lp);
+
+/*Append a copy of char to end of the list*/
+void llPut(LTree *lp, char *s);
+
+/*Delete all elements from list*/
+void llMakeEmpty(LTree *lp);
+
+/*Print list membership. Prints default if message is null*/
+void llPrint(LTree *lp);
+
+/*Check LList consistency,always return zero*/
+int LLCheck(LTree *lp, char *msg);
+
+#endif 
